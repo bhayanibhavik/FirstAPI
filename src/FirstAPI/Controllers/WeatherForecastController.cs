@@ -41,6 +41,7 @@ namespace FirstAPI.Controllers
         [Route("sum/{a}/{b}")]
         public async Task<IActionResult> GetSum(int a, int b)
         {
+            //This method will return sum of a + b
             var sum = await Task.Run(() => a + b);
             string json = JsonConvert.SerializeObject(sum);
             return Ok(json);
